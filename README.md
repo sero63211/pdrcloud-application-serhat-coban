@@ -5,10 +5,10 @@ This repository contains the solution to the Angular Junior/Mid-Level Developer 
 ## Project Structure
 
 - **Part 1: CSS Task - Smiley Icon with Pure CSS**  
-  The smiley icon created using only CSS is integrated into the Angular project and can be found within the User Interface and in the smiley.html file in the root directory.
+  The smiley icon created using only CSS is integrated into the Angular project and can be found within the User Interface and in the root directory inside the tasks folder.
 
 - **Part 2: TypeScript Basics**  
-  The TypeScript exercises, including functions, interfaces, and generics, are part of the Angular project structure. The implementation can be found within the app directory. Additionally, in the root directory, there is a part_2.js file which can be executed using node part_2.js.
+  The TypeScript exercises, including functions, interfaces, and generics, are part of the Angular project structure. The implementation can be found within the app directory. Additionally, in the root directory inside the tasks folder, there is a part_2.js file which can be executed using node part_2.js.
 
 - **Part 3: Angular Project with Angular Material**  
    The main Angular project is built with Angular Material, displaying a dynamic user list using a table with pagination. It also includes user details in a dialog and optional search functionality. As previously mentioned, the first and second parts are also included in the Angular project.
