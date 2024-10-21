@@ -1,0 +1,66 @@
+<div class="exercise-container">
+  <h1>TypeScript Exercises</h1>
+  <p class="click-to-show">Click on a task to show code →</p>
+
+  <div class="content">
+    <div class="tasks">
+      <!-- Task 1: Display area of rectangle -->
+      <h2 (click)="toggleCodeDisplay('task1')">
+        Task 1: Rectangle Area Calculation
+      </h2>
+      <p>Width: {{ width }} units</p>
+      <p>Height: {{ height }} units</p>
+      <p>
+        The area of the rectangle is: <strong>{{ area }} square units</strong>
+      </p>
+
+      <!-- Task 2: Display user array -->
+      <h2 (click)="toggleCodeDisplay('task2')">Task 2: User Array</h2>
+      <ul>
+        <li *ngFor="let user of userArray">
+          Name: {{ user.name }}, Age: {{ user.age }}, Email:
+          {{ user.email || "No email provided" }}
+        </li>
+      </ul>
+
+      <!-- Task 3: Display reversed arrays -->
+      <h2 (click)="toggleCodeDisplay('task3')">Task 3: Reversed Arrays</h2>
+      <p>Original Number Array: {{ numberArray }}</p>
+      <p>Reversed Number Array: {{ reversedNumberArray }}</p>
+      <p>Original String Array: {{ stringArray }}</p>
+      <p>Reversed String Array: {{ reversedStringArray }}</p>
+    </div>
+
+    <div class="code-display">
+      <div *ngIf="!showTaskCode" class="no-code">
+        <p>No code displayed</p>
+        <div class="big-arrow">→</div>
+      </div>
+
+      <!-- Display the code when a task is clicked -->
+      <div *ngIf="showTaskCode === 'task1'" class="code-container">
+        <pre>
+          <code class="language-typescript" [textContent]="codeForTask1"></code>
+        </pre>
+      </div>
+      <div *ngIf="showTaskCode === 'task2'" class="code-container">
+        <pre>
+          <code class="language-typescript" [textContent]="codeForTask2"></code>
+        </pre>
+      </div>
+      <div *ngIf="showTaskCode === 'task3'" class="code-container">
+        <pre>
+          <code class="language-typescript" [textContent]="codeForTask3"></code>
+        </pre>
+      </div>
+
+      <!-- Close button positioned at the bottom right -->
+      <div mat-dialog-actions class="dialog-actions">
+        <button mat-button class="close-button" (click)="closeDialog()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+  --
+</div>

@@ -1,0 +1,44 @@
+<div class="homepage-container">
+  <!-- Logo -->
+  <img src="assets/pdrLogo.png" class="homepage-logo" />
+
+  <!-- Name -->
+  <h1 class="homepage-title">SERHAT COBAN</h1>
+
+  <!-- Caption -->
+  <p class="homepage-text">Angular project as an application for PDR.cloud</p>
+
+  <!-- Tabbar -->
+  <mat-tab-group class="custom-tabbar">
+    <mat-tab label="Part 1">
+      <button
+        mat-raised-button
+        color="primary"
+        class="center-button"
+        (click)="openSmileyDialog()"
+      >
+        Show Smiley :)
+      </button>
+    </mat-tab>
+    <mat-tab label="Part 2">
+      <button
+        mat-raised-button
+        color="primary"
+        class="center-button"
+        (click)="openTypeScriptExerciseDialog()"
+      >
+        Show TypeScript Tasks
+      </button>
+    </mat-tab>
+    <mat-tab label="Part 3">
+      <button
+        mat-raised-button
+        color="primary"
+        class="center-button"
+        (click)="openUserListDialog()"
+      >
+        Show User Table
+      </button>
+    </mat-tab>
+  </mat-tab-group>
+</div>

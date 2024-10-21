@@ -1,27 +1,32 @@
-# PdrAngularDeveloperCodingExercises
+# PDR Angular Developer Coding Exercises
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
+This repository contains the solution to the Angular Junior/Mid-Level Developer Technical Assessment Challenge. The challenge is divided into three parts: a CSS task, TypeScript exercises, and an Angular project. All tasks are included in this Angular project repository.
 
-## Development server
+## Project Structure
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Part 1: CSS Task - Smiley Icon with Pure CSS**  
+  The smiley icon created using only CSS is integrated into the Angular project and can be found within the User Interface and in the smiley.html file in the root directory.
 
-## Code scaffolding
+- **Part 2: TypeScript Basics**  
+  The TypeScript exercises, including functions, interfaces, and generics, are part of the Angular project structure. The implementation can be found within the app directory. Additionally, in the root directory, there is a part_2.js file which can be executed using node part_2.js.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Part 3: Angular Project with Angular Material**  
+   The main Angular project is built with Angular Material, displaying a dynamic user list using a table with pagination. It also includes user details in a dialog and optional search functionality. As previously mentioned, the first and second parts are also included in the Angular project.
 
-## Build
+  Notes:
+  -Task 1: It is possible to hover over the components of the smiley to get more details.
+  -Task 2: Clicking on the tasks will display the corresponding code that was created for them.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Prerequisites
 
-## Running unit tests
+Ensure you have the following installed on your machine:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Node.js (v14+)
+- Angular CLI (v15+)
 
-## Running end-to-end tests
+## Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sero63211/pdrcloud-application-serhat-coban.git
+   ```

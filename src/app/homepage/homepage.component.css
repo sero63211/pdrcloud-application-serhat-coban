@@ -1,0 +1,101 @@
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.homepage-logo {
+  width: 20vw;
+  max-width: 150px;
+  margin-bottom: 2vh;
+}
+
+/* Title */
+.homepage-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2vh;
+}
+
+/* Caption*/
+.homepage-text {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 4vh;
+}
+
+/* Tabbar Styling */
+.custom-tabbar {
+  width: 100%;
+  margin-bottom: 5vh;
+  padding: 0 5vw;
+  box-sizing: border-box;
+}
+
+.center-button {
+  background-color: white;
+  color: #1976d2;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border: 2px solid #1976d2;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+/* Hover effect */
+.center-button:hover {
+  background-color: #1976d2;
+  color: white;
+}
+
+/* Media Queries for smaller screen */
+@media (max-width: 768px) {
+  .homepage-title {
+    font-size: 2rem;
+  }
+
+  .homepage-text {
+    font-size: 1rem;
+  }
+
+  .center-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage-title {
+    font-size: 1.5rem;
+  }
+
+  .homepage-text {
+    font-size: 0.9rem;
+  }
+
+  .center-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+.custom-dialog-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}

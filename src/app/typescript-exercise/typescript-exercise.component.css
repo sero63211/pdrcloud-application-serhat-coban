@@ -1,0 +1,169 @@
+.exercise-container {
+  font-family: Arial, sans-serif;
+  padding: 2vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+}
+
+h1 {
+  color: #1976d2;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.click-to-show {
+  font-size: 1.5vw;
+  color: #999;
+  margin-bottom: 2vw;
+  text-align: center;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  padding: 2vw;
+}
+
+.tasks {
+  flex: 1;
+  padding-right: 2vw;
+  overflow-y: auto;
+}
+
+h2 {
+  margin-top: 2vw;
+  color: #333;
+  cursor: pointer;
+  font-size: 2vw;
+}
+
+h2:hover {
+  color: #1976d2;
+}
+
+p {
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1vw;
+}
+
+strong {
+  color: #1976d2;
+}
+
+.code-display {
+  flex: 1;
+  padding-left: 2vw;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: relative;
+}
+
+.no-code {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-code p {
+  font-size: 2vw;
+  color: #999;
+}
+
+.big-arrow {
+  font-size: 6vw;
+  color: #1976d2;
+  margin-top: 2vw;
+}
+
+.code-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.code-container pre {
+  background-color: black;
+  color: white;
+  padding: 2vw;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 0;
+  box-sizing: border-box;
+  flex: 1;
+  background-color: #2b2b2b;
+}
+
+.code-container code {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.5vw;
+  line-height: 1.5;
+  color: #f8f8f2;
+}
+
+.close-button {
+  background-color: #1976d2;
+  color: white;
+  padding: 1vw 2vw;
+  border-radius: 4px;
+  text-transform: none;
+  font-size: 1.5vw;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.close-button:hover {
+  background-color: #1565c0;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  padding-top: 1vw;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4vw;
+  }
+
+  h2 {
+    font-size: 3vw;
+  }
+
+  p {
+    font-size: 2vw;
+  }
+
+  .click-to-show {
+    font-size: 2vw;
+  }
+
+  .big-arrow {
+    font-size: 8vw;
+  }
+
+  .code-container code {
+    font-size: 2vw;
+  }
+
+  .close-button {
+    font-size: 2vw;
+  }
+}

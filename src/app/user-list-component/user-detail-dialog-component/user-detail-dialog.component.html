@@ -1,0 +1,16 @@
+<div mat-dialog-content class="dialog-content">
+  <h2 mat-dialog-title class="dialog-title">User Details</h2>
+
+  <div *ngFor="let key of objectKeys()" class="dialog-field-container">
+    <ng-container *ngIf="data[key]">
+      <div class="dialog-field">
+        <strong>{{ keyToLabel(key) }}:</strong>
+        <p>{{ data[key] }}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button class="close-button" (click)="closeDialog()">Close</button>
+</div>

@@ -1,0 +1,75 @@
+<div class="container mat-elevation-z8">
+  <h2>Users</h2>
+
+  <!-- Add search field -->
+  <mat-form-field appearance="outline" class="search-field">
+    <mat-label>Search by Name</mat-label>
+    <input
+      matInput
+      (keyup)="applyFilter($event)"
+      placeholder="Enter username"
+    />
+  </mat-form-field>
+
+  <!-- Scrollable table container -->
+  <div class="table-container">
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      class="mat-table responsive-table"
+    >
+      <!-- Dynamic rendering for all columns -->
+      <ng-container
+        *ngFor="let column of displayedColumns"
+        [matColumnDef]="column"
+      >
+        <!-- Column header -->
+        <th mat-header-cell *matHeaderCellDef>
+          <ng-container
+            *ngIf="column === 'details'; else normalHeader"
+          ></ng-container>
+          <ng-template #normalHeader>{{ column | titlecase }}</ng-template>
+        </th>
+
+        <!-- Column cell content -->
+        <td mat-cell *matCellDef="let row">
+          <ng-container *ngIf="column === 'name'; else otherColumns">
+            {{ row.firstName }} {{ row.lastName }}
+          </ng-container>
+
+          <ng-container *ngIf="column === 'details'">
+            <button
+              mat-icon-button
+              (click)="openDialog(row)"
+              class="transparent-icon"
+            >
+              <mat-icon>info_outline</mat-icon>
+            </button>
+          </ng-container>
+
+          <ng-template #otherColumns>{{ row[column] }}</ng-template>
+        </td>
+      </ng-container>
+
+      <!-- Header and rows -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+
+  <!-- Paginator and Close button in a single row -->
+  <div class="dialog-footer">
+    <mat-paginator
+      [pageSizeOptions]="[10, 20, 50]"
+      showFirstLastButtons
+    ></mat-paginator>
+    <button
+      mat-raised-button
+      color="primary"
+      class="close-button"
+      (click)="this.dialogRef.closeAll()"
+    >
+      Close
+    </button>
+  </div>
+</div>

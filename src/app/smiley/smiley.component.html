@@ -1,0 +1,40 @@
+<div id="wrapper">
+  <h1>CSS Smiley</h1>
+  <div class="smiley-container">
+    <div class="smiley">
+      <div
+        class="eye left-eye"
+        (mouseenter)="showClassInfo('left-eye', $event)"
+        (mouseleave)="hideClassInfo()"
+      ></div>
+      <div
+        class="eye right-eye"
+        (mouseenter)="showClassInfo('right-eye', $event)"
+        (mouseleave)="hideClassInfo()"
+      ></div>
+      <div
+        class="mouth"
+        (mouseenter)="showClassInfo('mouth', $event)"
+        (mouseleave)="hideClassInfo()"
+      ></div>
+    </div>
+
+    <!-- Hover Info Dialog -->
+    <div
+      class="hover-info"
+      style="top: 100px; left: 100px"
+      [style.visibility]="hoveredClassName ? 'visible' : 'hidden'"
+    >
+      <p>
+        <strong>{{ hoveredClassName }}</strong>
+      </p>
+      -
+      <p>{{ hoveredStyle }}</p>
+    </div>
+  </div>
+  <div class="dialog-actions">
+    <button mat-button class="close-button" (click)="closeDialog()">
+      Close
+    </button>
+  </div>
+</div>
